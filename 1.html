@@ -1,43 +1,85 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/style.css" />
     <title>WEB - HTML</title>
     <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
   </head>
+
   <body>
     <h1><a href="index.html">WEB</a></h1>
-    <ol>
-      <li><a href="1.html">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
-      <li><a href="3.html">JavaScript</a></li>
-    </ol>
-    <h2>HTML</h2>
-    <a
-      href="https://www.w3.org/TR/2011/WD-html5-20110405/index.html"
-      target="_blank"
-      title="html specification"
-    >
-      HTML은 (Hyper Text Markup Language)</a
-    >의 약어이다.<br />
-    <p>약어 살펴보기</p>
-    <ul>
-      <li>
-        (hyper text) : 관련 항목을 연결하기 위해 구성된 텍스트(다른 페이지로
-        이동하는 것,같은 페이지 내의 다른 데이터로 이동하는 것)
-      </li>
-      <li>
-        (Mark up) : 마크업 이란 어딘가에 Mark, 즉 표시를 해두는 것을 뜻한다
-        (태그를 이용하여 구조적으로 표현가능)
-      </li>
-      <li>(Language) : 컴퓨터와 의사소통을 하기 위한 언어를 뜻한다.</li>
-    </ul>
-    <img src="coding.jpg" width="550" />
-    <p>
-      따라서 HTML(hyper text markup language)은 웹 브라우저에게 내 컨텐츠를
-      어떻게 표현해야 하는지 명령하는 언어이며<br />
-      함께 일하는 사람들뿐만 아니라 웹 크롤러라는 데이터를 긁어 수집하는
-      로봇들에게도 웹 문서 내의 데이터들을<br />
-      구조적으로 표시하여 전달하는 언어이다.
-    </p>
+    <div class="grid">
+      <ol>
+        <li><a href="1.html" class="see">HTML</a></li>
+        <li><a href="2.html" class="saw">CSS</a></li>
+        <li><a href="3.html" class="saw">JavaScript</a></li>
+      </ol>
+      <div>
+        <h2>HTML</h2>
+        <a
+          href="https://www.w3.org/TR/2011/WD-html5-20110405/index.html"
+          target="_blank"
+          title="html specification"
+        >
+          HTML은 (Hyper Text Markup Language)</a
+        >의 약어이다.<br />
+        <ul>
+          <li>(hyper text) : 관련 항목을 연결하기 위해 구성된 텍스트</li>
+          <li>(Mark up) : 어딘가에 표시를하여 구조적으로 나타낸다는 뜻. (태그나 부호 등)</li>
+          <li>(Language) : 컴퓨터와 의사소통을 하기 위한 언어를 뜻한다.</li>
+        </ul>
+        정리하자면 HTML이란 문서 간의 이동이 가능한 텍스트 구조를 나타내는 언어이다.
+        <img src="coding.jpg" width="550" />
+        <p>
+          따라서 HTML(hyper text markup language)은 웹 브라우저에게 내 컨텐츠를 <br />어떻게
+          표현해야 하는지 명령하는 언어이며 함께 일하는 사람들뿐만 아니라<br />
+          웹 크롤러라는 데이터를 긁어 수집하는 로봇들에게도 웹 문서 내의 데이터들을<br />
+          구조적으로 표시하여 전달하는 언어이다.
+        </p>
+      </div>
+      <div class="unit">
+        <div>
+          <h2>HTML Elements</h2>
+          모든 HTML 요소(Elements)는 속성(Attribute)을 가질 수 있습니다.
+          <ul>
+            <li>속성은 요소에 대한 추가 정보를 제공합니다.</li>
+            <li>속성은 항상 시작 태그 에 지정됩니다.</li>
+            <li>속성은 일반적으로 name="value" 와 같은 이름/값 쌍으로 제공됩니다.</li>
+          </ul>
+          또한 HTML 요소는 여러 속성을 가질 수 있으며, 이러한 속성은 해당 요소에 대한 <br />
+          추가적인 정보를 제공합니다.(HTML 요소는 시작 태그로 시작해서 종료 태그로 끝이난다.)
+          <span type="text" class="box">&lt;p 속성명 ="속성값"&gt;내용&lt;/p&gt; </span>
+        </div>
+        <div id="last">
+          <h2>HTML Attribute</h2>
+          HTML 속성(Attribute)는 일반적으로 이름-값 쌍으로 나타내며<br />
+          구분은 = 로 하며 요소의 시작 태그 안에서 작성됩니다.<br />
+          <span type="text" class="box"
+            >&lt;태그 속성 ="값"&gt;content to be modified by the tag&lt;/태그&gt;</span
+          >
+          <p>
+            위 예시에서 태그는 HTML 요소의 유형을 명명하고 속성은 속성의 이름을 가리키며 지정된 값을
+            설정한다. 이 값은 ''"" 와 같이 속성의 값들을 인용 부호로 감싸주어야 한다.
+          </p>
+          <p>
+            단. 특정한 문자들을 이루는 값들은 HTML에서 인용 부호 없이 남겨둘 수 있으며,(XHTML 에서는
+            제외)속성 값에 빈칸이 들어가는 경우 반드시 인용 부호로 묶어야 한다. 결국 인용 부호는
+            일관성 있게 사용하는 것이 중요하다.
+          </p>
+        </div>
+      </div>
+    </div>
+    <span
+      type="button"
+      class="button1"
+      id="night_day"
+      data-back="Dark"
+      data-front="Light"
+      onclick="  
+  Button.Handler(this);
+  "
+    ></span>
   </body>
 </html>
