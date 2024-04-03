@@ -1,0 +1,156 @@
+body {
+  margin: 0px;
+}
+
+.button1 {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline;
+  text-decoration: none;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.button1:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
+.button1:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+
+.button1:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  line-height: 40px;
+  color: #adadaf;
+  display: inline-block;
+  transition: 0.4s;
+  position: absolute;
+  background: #323237;
+  content: attr(data-back);
+  transform: translateY(-50%) rotateX(90deg);
+}
+
+.button1:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: #323237;
+  display: inline-block;
+  padding: 0 30px;
+  line-height: 40px;
+  transition: 0.4s;
+  position: relative;
+  background: #adadaf;
+  content: attr(data-front);
+  transform: translateY(0) rotateX(0);
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  border: 1px solid gray;
+  margin: 0px;
+  padding: 10px;
+  text-shadow: aqua 0px 0px 4px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.saw {
+  opacity: 0.5;
+}
+.saw:hover {
+  font-size: large;
+  transition: 0.1s;
+}
+
+.see {
+  font-size: larger;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 140px 1fr 1.3fr;
+  border-bottom: 1px solid gray;
+}
+
+.grid ol {
+  border-right: 1px solid gray;
+  width: 100px;
+  margin: 0px;
+  padding: 20px;
+  padding-left: 25px;
+}
+
+.grid div {
+  margin-left: 25px;
+  border-right: gray solid 1px;
+}
+
+.unit {
+  display: grid;
+  grid-template-rows: auto auto;
+  border-left: gray solid 1px;
+}
+.box {
+  border: rgb(150, 212, 150) solid 1px;
+  background-color: rgb(182, 230, 182);
+  font-size: 18px;
+  color: black;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.unit div {
+  margin: 0px;
+  padding-left: 8px;
+  border-bottom: 1px gray solid;
+}
+
+#last {
+  border: none;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    display: block;
+  }
+  .grid ol {
+    border: none;
+  }
+  .grid div {
+    border: none;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .unit {
+    display: block;
+    text-align: center;
+  }
+  .box {
+    border: none;
+  }
+  .unit ul {
+    padding-left: 20px;
+  }
+}
+
+.강조 {
+  background-color: rgba(255, 243, 138, 0.945);
+  color: black;
+}
